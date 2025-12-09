@@ -99,10 +99,57 @@ tr {
   text-shadow: 0.2em 0.2em 0.2em white;
 }
 .booklist ul li img {
-  border: solid;
-  border-color: lightgray;
-  border-width: 1px;
+  /* border: solid; */
+  /* border-color: lightgray; */
+  /* border-width: 1px; */
 }
 footer #SNS a:last-child img {
   height: 40px;
+}
+/* --- Media Controls Layout --- */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* 요소 간 간격 */
+  margin-top: 6px;
+}
+
+/* 아이콘 버튼 스타일 */
+.controls .play {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls .play img.play-icon {
+  width: 22px;
+  height: 22px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 시간 표시 */
+.controls .time {
+  font-size: 13px;
+  font-weight: bold;
+  min-width: 80px;
+  display: inline-block;
+}
+
+/* 볼륨 label + input 정렬 */
+.controls label {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.controls input.volume {
+  width: 80px;
 }
