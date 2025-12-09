@@ -1,4 +1,20 @@
 // ===== 도서 데이터 =====
+function showMainImage() {
+  const doc = getIframeDoc();
+  if (!doc) return;
+
+  doc.open();
+  doc.write(`
+    <html>
+      <body style="margin:0; padding:0; background:white;">
+        <img src="images/books.jpg" 
+             style="display:block; width:600px; height:500px; margin:0 auto;" />
+      </body>
+    </html>
+  `);
+  doc.close();
+}
+
 const domesticBooks = [
   {
     title: '컴퓨터와 IT기술의 이해 [개정판-2판]',
@@ -219,7 +235,8 @@ window.addEventListener('DOMContentLoaded', function () {
         function (position) {
           const lat = position.coords.latitude.toFixed(5);
           const lon = position.coords.longitude.toFixed(5);
-          posDiv.textContent = `위도: ${lat}, 경도: ${lon}`;
+          // posDiv.textContent = `위도: ${lat}, 경도: ${lon}`;
+          posDiv.innerHTML = `위도: ${lat}<br>경도: ${lon}`;
         },
         function () {
           posDiv.textContent = '위치 정보를 가져올 수 없습니다.';
@@ -227,4 +244,8 @@ window.addEventListener('DOMContentLoaded', function () {
       );
     });
   }
+});
+// 페이지 처음 열리면 books.jpg를 iframe 안에 이미지로 띄우기
+window.addEventListener('DOMContentLoaded', function () {
+  showMainImage(); // ← 이 함수만 추가해주면 끝
 });
