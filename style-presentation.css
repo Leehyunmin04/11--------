@@ -104,5 +104,5 @@ tr {
   border-width: 1px;
 }
 footer #SNS a:last-child img {
-  height: 40px; /* 필요하면 36~40 사이로 조절 */
+  height: 40px;
 }

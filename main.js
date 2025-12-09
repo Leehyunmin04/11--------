@@ -201,7 +201,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const locationBtn = document.getElementById('location');
   const posDiv = document.getElementById('position');
 
-  // 메뉴 버튼은 숨기기 (과제 조건: 화면상에는 안 보이게)
+  // 메뉴 버튼은 숨기기
   if (memoBtn) {
     memoBtn.style.display = 'none';
   }
@@ -247,5 +247,5 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 // 페이지 처음 열리면 books.jpg를 iframe 안에 이미지로 띄우기
 window.addEventListener('DOMContentLoaded', function () {
-  showMainImage(); // ← 이 함수만 추가해주면 끝
+  showMainImage();
 });
