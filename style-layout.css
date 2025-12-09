@@ -88,3 +88,13 @@ article {
   margin: 5px 5px 10px 5px;
   list-style-type: none;
 }
+.booklist ul li.breakline {
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}

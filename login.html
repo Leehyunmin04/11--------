@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Login Page</title>
+    <title>현민서점 Login Page</title>
     <link rel="stylesheet" type="text/css" href="style-size.css" />
     <link rel="stylesheet" type="text/css" href="style-layout.css" />
     <link rel="stylesheet" type="text/css" href="style-presentation.css" />
@@ -23,31 +23,6 @@
       <div id="loginMsg" style="margin-top: 10px; font-size: 12px"></div>
     </form>
 
-    <script>
-      const loginForm = document.getElementById('loginForm');
-      const loginMsg = document.getElementById('loginMsg');
-      const resetBtn = document.getElementById('reset');
-
-      loginForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const id = document.getElementById('username').value.trim();
-
-        if (!id) {
-          alert('아이디를 입력하세요.');
-          document.getElementById('username').focus();
-          return;
-        }
-
-        // 웹 스토리지에 저장
-        localStorage.setItem('userId', id);
-        loginMsg.textContent = id + '님 로그인 되었습니다.';
-      });
-
-      resetBtn.addEventListener('click', function () {
-        document.getElementById('username').value = '';
-        document.getElementById('password').value = '';
-        loginMsg.textContent = '';
-      });
-    </script>
+    <script src="login.js"></script>
   </body>
 </html>
